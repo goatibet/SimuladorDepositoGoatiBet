@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GOATBET — Simulador de depósito e bônus</title>
+<meta name="description" content="Simule seu depósito na GOATBET e veja na hora quanto cai no saldo com o bônus de 100%. Use o código BOASVINDAS100. Depósito via PIX.">
+<meta name="theme-color" content="#080808">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/img/goatbet-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/img/goatbet-icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GOATBET — Deposite e jogue com o dobro">
+<meta property="og:description" content="Bônus de 100% com o código BOASVINDAS100. Simule seu depósito e veja quanto cai no saldo, na hora, via PIX.">
+<meta property="og:image" content="assets/img/goatbet-share.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="glow glow--top" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="topbar__logo" href="#simulador">
+      <img src="assets/img/goatbet-logo-header.png" alt="GOATBET" width="1000" height="250">
+    </a>
+    <nav class="topbar__actions">
+      <a class="btn btn--ghost btn--sm" data-cta="entrar" href="#">Entrar</a>
+      <a class="btn btn--gold btn--sm" data-cta="topo" href="#">Cadastrar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero__eyebrow"><span class="dot"></span> Bônus de 100% · PIX instantâneo</p>
+
+      <h1 class="hero__title">
+        Deposite <span class="gold" data-bind="hero-deposito">R$ 500</span><br>
+        e jogue com <span class="gold" data-bind="hero-total">R$ 1.000</span>
+      </h1>
+
+      <p class="hero__sub" data-bind="hero-sub">
+        Bônus de 100% no seu depósito com o código BOASVINDAS100. Crédito na hora, via PIX.
+      </p>
+
+      <div class="tiers" data-bind="tiers" role="group" aria-label="Faixas de bônus" hidden></div>
+
+      <div class="codebox" data-codigo>
+        <div class="codebox__info">
+          <span class="codebox__label">Código de bônus</span>
+          <strong class="codebox__code" data-codigo-valor>BOASVINDAS100</strong>
+        </div>
+        <button class="codebox__btn" type="button" data-copiar>Copiar</button>
+      </div>
+
+      <a class="btn btn--gold btn--lg btn--block hero__cta" data-cta="hero" href="#">
+        QUERO MEU BÔNUS <span aria-hidden="true">&rarr;</span>
+      </a>
+
+      <p class="hero__fine">Cadastro em 1 minuto · PIX instantâneo · +18</p>
+    </div>
+  </section>
+
+  <!-- ============ SIMULADOR ============ -->
+  <section class="sim-section" id="simulador">
+    <div class="wrap">
+      <div class="sim">
+        <header class="sim__head">
+          <h2 class="sim__title">SIMULADOR DE DEPÓSITO</h2>
+          <p class="sim__sub">Arraste e veja quanto você joga, na hora.</p>
+        </header>
+
+        <div class="sim__row">
+          <div class="slider">
+            <div class="slider__track" aria-hidden="true"><div class="slider__fill" data-bind="slider-fill"></div></div>
+            <input class="slider__input" id="valor" type="range" min="20" max="5000" step="10" value="500"
+                   aria-label="Valor do depósito em reais">
+          </div>
+          <div class="amount">
+            <span class="amount__prefix">R$</span>
+            <input class="amount__input" id="valor-texto" type="text" inputmode="numeric" value="500"
+                   aria-label="Digite o valor do depósito">
+          </div>
+        </div>
+
+        <div class="chips" data-bind="chips" role="group" aria-label="Valores rápidos"></div>
+
+        <div class="cards">
+          <div class="card">
+            <p class="card__label">Bônus</p>
+            <p class="card__value gold" data-bind="bonus">R$ 500</p>
+            <p class="card__foot" data-bind="bonus-pct">+100%</p>
+          </div>
+          <div class="card card--hero">
+            <p class="card__label">Total creditado</p>
+            <p class="card__value" data-bind="total">R$ 1.000</p>
+            <p class="card__foot">depósito + bônus</p>
+          </div>
+        </div>
+
+        <div class="progress">
+          <div class="progress__bar"><div class="progress__fill" data-bind="progress"></div></div>
+          <p class="progress__msg" data-bind="progress-msg">Bônus de 100% aplicado neste depósito</p>
+        </div>
+
+        <div class="codebox codebox--sm" data-codigo>
+          <div class="codebox__info">
+            <span class="codebox__label">Use no depósito</span>
+            <strong class="codebox__code" data-codigo-valor>BOASVINDAS100</strong>
+          </div>
+          <button class="codebox__btn" type="button" data-copiar>Copiar</button>
+        </div>
+
+        <a class="btn btn--gold btn--lg btn--block" data-cta="simulador" href="#" data-bind="cta-sim">
+          DEPOSITAR R$ 500 AGORA
+        </a>
+
+        <p class="sim__note" data-bind="sim-note">Depósito de R$ 20 a R$ 1.000 · crédito na hora, via PIX.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMO FUNCIONA ============ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">COMO FUNCIONA</h2>
+      <div class="steps">
+        <article class="step">
+          <div class="step__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+          </div>
+          <h3 class="step__title">1. Cadastre-se</h3>
+          <p class="step__text">Crie sua conta GOATBET em 1 minuto, no celular ou no computador.</p>
+        </article>
+        <article class="step">
+          <div class="step__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM20 14v3M17 20h4"/></svg>
+          </div>
+          <h3 class="step__title">2. Use o código no depósito</h3>
+          <p class="step__text">Informe <strong class="gold" data-codigo-texto>BOASVINDAS100</strong>, escolha o valor e pague o PIX pelo app do seu banco.</p>
+        </article>
+        <article class="step">
+          <div class="step__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+          </div>
+          <h3 class="step__title">3. Bônus cai na hora</h3>
+          <p class="step__text">O crédito de bônus entra no seu saldo junto com o depósito.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOGOS ============ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">JOGUE COM O SEU BÔNUS</h2>
+      <p class="section__sub">Os mais jogados da GOATBET</p>
+      <div class="games">
+        <figure class="game"><img src="assets/img/jogos/fortune-tiger.jpg" alt="Fortune Tiger" loading="lazy"><figcaption>Fortune Tiger</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/fortune-rabbit.png" alt="Fortune Rabbit" loading="lazy"><figcaption>Fortune Rabbit</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/gates-of-olympus.png" alt="Gates of Olympus" loading="lazy"><figcaption>Gates of Olympus</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/sugar-rush.png" alt="Sugar Rush" loading="lazy"><figcaption>Sugar Rush</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/fortune-ox.png" alt="Fortune Ox" loading="lazy"><figcaption>Fortune Ox</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/fortune-dragon.png" alt="Fortune Dragon" loading="lazy"><figcaption>Fortune Dragon</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/fortune-mouse.png" alt="Fortune Mouse" loading="lazy"><figcaption>Fortune Mouse</figcaption></figure>
+        <figure class="game"><img src="assets/img/jogos/wild-bandito.webp" alt="Wild Bandito" loading="lazy"><figcaption>Wild Bandito</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POR QUE ============ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">POR QUE A GOATBET</h2>
+      <ul class="perks">
+        <li class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg> Depósito via PIX</li>
+        <li class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M7 12h3M8.5 10.5v3M16 11h.01M18 14h.01"/></svg> PG Soft e Pragmatic</li>
+        <li class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> Jogue no celular</li>
+        <li class="perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Saque rápido</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section__title">PERGUNTAS FREQUENTES</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Como recebo o bônus?</summary>
+          <p>Informe o código <strong class="gold" data-codigo-texto>BOASVINDAS100</strong> no momento do depósito. O bônus de 100% é creditado junto com a confirmação do PIX.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Qual o valor mínimo e máximo?</summary>
+          <p data-bind="faq-minimo">O depósito vai de R$ 20 a R$ 1.000, e o bônus de 100% vale em todo esse intervalo.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Esqueci de usar o código. E agora?</summary>
+          <p>O código precisa ser informado no próprio depósito. Se o PIX já foi pago sem ele, fale com o suporte da GOATBET antes de apostar o valor.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Existe rollover?</summary>
+          <p>Sim. O valor do bônus precisa ser apostado antes de virar saldo sacável. O multiplicador aparece nos termos da promoção dentro da sua conta.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Quanto tempo demora o PIX?</summary>
+          <p>O crédito costuma cair em segundos após o pagamento. Em horários de pico pode levar alguns minutos.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Este simulador é oficial?</summary>
+          <p>Ele serve para estimar o valor creditado. As regras válidas são sempre as publicadas na página da promoção dentro da GOATBET.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <img class="footer__logo" src="assets/img/goatbet-logo-header.png" alt="GOATBET" width="1000" height="250" loading="lazy">
+    <p class="footer__strong">+18 · Apostas envolvem riscos. Jogue com responsabilidade.</p>
+    <p>Os valores exibidos são simulações. Bônus sujeito aos termos vigentes da GOATBET.</p>
+    <p>Jogue com moderação. Se o jogo deixou de ser diversão, procure ajuda.</p>
+  </div>
+</footer>
+
+<div class="stickybar" data-bind="stickybar">
+  <div class="stickybar__info">
+    <span class="stickybar__label">Você joga com</span>
+    <strong class="stickybar__value gold" data-bind="sticky-total">R$ 1.000</strong>
+  </div>
+  <a class="btn btn--gold" data-cta="sticky" href="#">DEPOSITAR</a>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

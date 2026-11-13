@@ -1,0 +1,11 @@
+{
+  "name": "simulador-deposito-goatbet",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Presell com simulador de depósito/bônus da GOATBET",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs . 4321",
+    "start": "node scripts/dev-server.mjs . 4321"
+  }
+}
